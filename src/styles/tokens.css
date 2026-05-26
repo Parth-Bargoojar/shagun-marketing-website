@@ -1,0 +1,18 @@
+:root {
+  --green: #4B6F44;
+  --mustard: #D4A017;
+  --beige: #F3E5AB;
+  --deep-green: #2E4A2E;
+  --off-white: #FAF6EC;
+  --white: #FFFFFF;
+  --grey: #666666;
+  --light-grey: #F4F4F4;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
+  --radius-card: 16px;
+  --radius-button: 10px;
+  --shadow-card: 0 4px 24px rgba(75,111,68,0.10);
+  --shadow-hover: 0 8px 32px rgba(75,111,68,0.18);
+  --max-width: 1200px;
+  --section-padding: 96px 24px;
+}

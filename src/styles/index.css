@@ -1,0 +1,32 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  :root {
+    --green: #4B6F44;
+    --mustard: #D4A017;
+    --beige: #F9FAF3;
+    --deep-green: #2E4A2E;
+    --off-white: #FAF6EC;
+  }
+
+  body {
+    background-color: var(--off-white);
+    color: var(--deep-green);
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: var(--deep-green);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

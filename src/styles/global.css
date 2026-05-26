@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--off-white);
+  font-family: var(--font-body);
+  color: var(--deep-green);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* For Framer Motion ease */
+.page-transition {
+  width: 100%;
+}
+
+/* --- Animations & Microinteractions --- */
+.hover-scale {
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.hover-scale:hover {
+  transform: scale(1.03) !important;
+}
+
+.hover-scale:active {
+  transform: scale(0.98) !important;
+}
+
+.hover-lift {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px) !important;
+  box-shadow: var(--shadow-hover) !important;
+}
+
+button, a {
+  transition: opacity 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* User Preference: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --- Decorative Patterns & Section Stability --- */
+.pattern-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.pattern-content {
+  position: relative;
+  z-index: 1;
+}
+
+.pattern-element {
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  user-select: none;
+}
+
+/* Mobile pattern adjustments */
+@media (max-width: 768px) {
+  .pattern-element-mobile-opacity {
+    opacity: 0.5 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .pattern-paisley-scatter {
+    display: none;
+  }
+}
+
