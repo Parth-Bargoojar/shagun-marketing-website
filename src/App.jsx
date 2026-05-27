@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/layout/Navbar';
+import SplashScreen from './components/ui/SplashScreen';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import HowItWorks from './pages/HowItWorks';
@@ -39,6 +40,7 @@ import ErrorBoundary from './components/common/ErrorBoundary';
 function App() {
   return (
     <Router>
+      <SplashScreen />
       <Navbar />
       <ErrorBoundary>
         <AnimatedRoutes />
